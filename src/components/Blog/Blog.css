@@ -1,0 +1,26 @@
+.author-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.author {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+.single-blog {
+    border-bottom: 1px solid #80808047;
+    margin-bottom: 20px;
+}
+h1.b-title {
+    margin: 20px 0px;
+}
+.mark-as-read {
+    margin: 15px 0px;
+}
+.blog-image img{
+    width: 100%;
+}

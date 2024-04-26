@@ -1,0 +1,28 @@
+.bookmark-box {
+    margin: 25px 0px;
+    background: #1111111f;
+    padding: 16px;
+    border-radius: 8px;
+}
+.total-time {
+    border: 1px solid #6047EC;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+.total-time p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6047EC;
+}
+.total-bookmark-num{
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+}
+p.marked-item {
+    background: #fff;
+    border-radius: 8px;
+    margin: 15px 0px;
+    padding: 10px;
+}
