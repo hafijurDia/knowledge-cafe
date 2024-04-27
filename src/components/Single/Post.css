@@ -1,0 +1,9 @@
+.mark-as-read span{
+    text-decoration: underline;
+}
+
+.mark-as-read span:hover{
+    color: blueviolet;
+    cursor: pointer;
+    
+}

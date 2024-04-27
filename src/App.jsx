@@ -10,15 +10,7 @@ function App() {
     <>
       <div>
         <Header></Header>
-        <main>
-          <div className='blog-content'>
           <Blog></Blog>
-          </div>
-          <div className='sidebar'>
-          <Sidebar></Sidebar>
-          </div>
-          
-        </main>
       </div>
       
     </>
