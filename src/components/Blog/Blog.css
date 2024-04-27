@@ -4,12 +4,14 @@ main {
     gap: 10px;
     margin-top: 20px;
     justify-content: space-between;
+    
   }
   .blog-content{
   width: 66%;
   }
   .sidebar{
     width: 31%;
+    position: relative;
   }
   
   .logo {

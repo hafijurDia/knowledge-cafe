@@ -4,17 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import Post from '../Single/Post';
 import Sidebar from '../Sidebar/Sidebar';
-
+import { toast } from 'react-toastify';
 
 
 const Blog = () => {
 
     const [blogs, setBlogs] = useState([]);
     const [minutes, setMinutes] = useState(0);
-    const [bookmarks, setBookmarks] = useState(0);
     const [bookmarksItem, setBookmarksItem] = useState([]);
-    console.log(bookmarksItem);
-
 
     useEffect(()=>{
         fetch('../../../fakeData/blogs.json')
@@ -32,10 +29,17 @@ const addMinute = (blog) => {
 
 //add to bookmark
 const addToBookmark = (blog) => {
-    const newBookmarks = bookmarks + 1;
-    setBookmarks(newBookmarks);
-    const newBookmarksItem = [...bookmarksItem, blog]
-    setBookmarksItem(newBookmarksItem);
+    const exist = bookmarksItem.find(bg => bg.id === blog.id);
+    if (!exist) {
+        const newBookmarksItem = [...bookmarksItem, blog]
+        setBookmarksItem(newBookmarksItem);
+        toast.success("Successfully added in bookmarked!"); 
+    }
+    else
+    {
+        toast.warning("Sorry! This blog already bookmarked!"); 
+    }
+    
     
 }
 
@@ -58,7 +62,6 @@ const addToBookmark = (blog) => {
           <Sidebar 
           key={bookmarksItem.id}
           minutes={minutes} 
-          bookmarks={bookmarks} 
           bookmarksItem={bookmarksItem}
           >
 

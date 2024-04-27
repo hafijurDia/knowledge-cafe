@@ -3,19 +3,19 @@ import '../Sidebar/Sidebar.css';
 
 const Sidebar = (Props) => {
     let totalMinutes = Props.minutes;
-    let totalBookmarks = Props.bookmarks;
     const allBookmarkedItem = Props.bookmarksItem;
+
     
     return (
-        <div>
-            <div className="siderbar-inner">
+        <div className='siderbar-inner'>
+            <div className="">
                 <div className="total-time">
                     <p>Spent time on read : {totalMinutes} min</p>
                 </div>
                 <div className="bookmark-box">
-                    <p className='total-bookmark-num'>Bookmarked Blogs : {totalBookmarks}</p>
+                    <p className='total-bookmark-num'>Bookmarked Blogs : {allBookmarkedItem.length}</p>
                     {
-                        allBookmarkedItem.map(sinlgItems => <p className='marked-item'>{sinlgItems.title}</p>)
+                        allBookmarkedItem.map(sinlgItems => <p className='marked-item' key="">{sinlgItems.title}</p>)
                     }
                     
                     

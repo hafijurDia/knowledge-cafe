@@ -26,3 +26,7 @@ p.marked-item {
     margin: 15px 0px;
     padding: 10px;
 }
+.siderbar-inner{
+    position: sticky;
+    top:0;
+}
